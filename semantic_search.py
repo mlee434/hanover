@@ -276,12 +276,14 @@ async def create_semantic_context(query: str, max_chunks: int = 8) -> Tuple[str,
         print(f"🌐 Scraping {len(urls)} URLs concurrently...")
         scraped_pages = await scrape_urls_async(urls, search_results)
         
-        # Process scraped content into chunks
+        # Process scraped content into chunks (limit to first 100 chunks per website)
         for i, (url, page_text, title) in enumerate(scraped_pages, 1):
             if not page_text.startswith("Error"):
                 # Create chunks from this page
                 chunks = chunk_text(page_text)
                 
+                # Limit to first 100 chunks per website to control processing time and costs
+                chunks_processed = 0
                 for j, text_chunk in enumerate(chunks):
                     if len(text_chunk.strip()) > 50:  # Only process substantial chunks
                         all_text_chunks.append({
@@ -291,6 +293,12 @@ async def create_semantic_context(query: str, max_chunks: int = 8) -> Tuple[str,
                             'chunk_id': j,
                             'title': title
                         })
+                        chunks_processed += 1
+                        
+                        # Stop after 100 chunks per website
+                        if chunks_processed >= 100:
+                            print(f"📏 Limited to first {chunks_processed} chunks for {url}")
+                            break
         
         if not all_text_chunks:
             return "No content could be processed for semantic search.", []
