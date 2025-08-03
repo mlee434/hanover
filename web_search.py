@@ -2,6 +2,7 @@
 Web search and scraping functionality for Hanover AI Q&A system.
 """
 
+import os
 import requests
 from bs4 import BeautifulSoup
 from serpapi import GoogleSearch
@@ -24,7 +25,7 @@ def search(query: str) -> list:
         "hl": "en",
         "gl": "us",
         "google_domain": "google.com",
-        "api_key": "042f51c79e8bd515a1f519c9f389240e40919b180bf6271f1a43138e4a67e1a3"
+        "api_key": os.getenv("SERPAPI_API_KEY")
     }
 
     search = GoogleSearch(params)
