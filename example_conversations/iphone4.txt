@@ -1,0 +1,40 @@
+HANOVER - AI Q&A Conversation Export
+==================================================
+
+USER: When was the iPhone 4 released?
+
+ASSISTANT: The iPhone 4 was released on June 24, 2010 [Source 2] [Source 6].
+
+Sources:
+[Source 2] https://www.apple.com/newsroom/2010/06/07Apple-Presents-iPhone-4/
+[Source 6] https://simple.wikipedia.org/wiki/IPhone_4
+
+----------------------------------------
+
+USER: how much did it cost
+
+ASSISTANT: The iPhone 4 was available in the United States starting at $199 for qualified buyers with a two-year contract when it was released [Source 2].
+
+Sources:
+[Source 2] https://www.apple.com/newsroom/2010/06/07Apple-Presents-iPhone-4/
+
+----------------------------------------
+
+USER: how about without a contract
+
+ASSISTANT: The iPhone 4 launch price in the United States without a contract (no commitment) was $599 for the 16GB model and $699 for the 32GB model. These prices applied to devices locked to AT&T but sold without the requirement of a two-year service agreement. It’s important to note that "no contract" did not mean "unlocked"—the phones were still carrier-locked to AT&T at this price point. Fully unlocked iPhone 4 units (not carrier-locked) were introduced later in the U.S., with prices starting at $649 for the 16GB model and $749 for the 32GB model [Source 1] [Source 4].
+
+Sources:
+[Source 1] https://osxdaily.com/2010/07/08/iphone-4-price-without-contract/
+[Source 4] https://www.latimes.com/archives/blogs/technology-blog/story/2011-06-14/apples-unlocked-iphone-4-sells-for-649-or-749
+
+----------------------------------------
+
+USER: how much did it cost in the UK
+
+ASSISTANT: In the UK, the unlocked retail price of the iPhone 4 at launch was £499 for the 16GB model and £599 for the 32GB model [Source 5].
+
+Sources:
+[Source 5] https://www.fonearena.com/blog/18700/apple-iphone4-unlocked-prices-revealed.html
+
+Exported on: 2025-08-03 15:47:15
